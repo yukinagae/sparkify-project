@@ -8,3 +8,5 @@ scipy
 six
 sklearn
 pyspark
+flake8
+autopep8

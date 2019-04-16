@@ -9,3 +9,6 @@ models/*.pkl
 
 # jupyter
 notebooks/.ipynb*
+
+# vscode
+.vscode/*
