@@ -1,0 +1,11 @@
+# python setting
+.python-version
+
+# data
+data/*.json
+
+# model1
+models/*.pkl
+
+# jupyter
+notebooks/.ipynb*

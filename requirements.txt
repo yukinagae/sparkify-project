@@ -1,0 +1,10 @@
+Flask
+jupyter
+seaborn
+numpy
+pandas
+plotly
+scipy
+six
+sklearn
+pyspark
