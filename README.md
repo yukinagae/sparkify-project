@@ -2,13 +2,17 @@
 
 ## Table of Contents
 
-- [Project Definition](#project-definition)
-- [Dependencies](#dependencies)
-- [Installation](#installation)
-- [Instructions](#instructions)
-- [Project Organization](#project-organization)
-- [Analysis](#analysis)
-- [Conclusion](#conclusion)
+- [Sparkify Project](#sparkify-project)
+  - [Table of Contents](#table-of-contents)
+  - [Project Definition](#project-definition)
+  - [Dependencies](#dependencies)
+  - [Installation](#installation)
+  - [Instructions](#instructions)
+    - [Jupyter Notebook](#jupyter-notebook)
+    - [Web Application](#web-application)
+  - [Project Organization](#project-organization)
+  - [Analysis](#analysis)
+  - [Conclusion](#conclusion)
 
 ## Project Definition
 
@@ -17,24 +21,33 @@ This project uses users' event data from Sparkify, which is an imaninary digital
 
 ## Dependencies
 
-Python3.7
+- Python3.7
+- [Poetry](https://github.com/sdispater/poetry)
 
 ## Installation
 
-```python
-pip install -r requirements.txt
+```bash
+cd sparkify-project
+poetry install
 ```
 
 ## Instructions
 
-1. Run the following commands in the project's root directory to set up your model.
+### Jupyter Notebook
 
-    - TODO: not yet written
+```bash
+cd sparkify-project
+poetry run jupyter notebook
+```
 
-2. Run the following command in the app's directory to run your web app.
-    `python run.py`
+### Web Application
 
-3. Go to `http://0.0.0.0:3001/`
+```bash
+cd sparkify-project
+poetry run python run.py
+```
+
+Go to `http://0.0.0.0:3001/`
 
 ## Project Organization
 
@@ -49,8 +62,12 @@ pip install -r requirements.txt
 │   └── mini_sparkify_event_data.json
 ├── models
 │   └── *.py
+├── notebooks
+│   └── *.ipynb
 ├── README.md
-└── requirements.txt
+├── .gitignore
+├── poetry.lock
+└── pyproject.toml <- config file contains the project information and package dependencies etc.
 ```
 
 ## Analysis
