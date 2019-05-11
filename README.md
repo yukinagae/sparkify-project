@@ -16,7 +16,7 @@
 ## Project Definition
 
 This is a [Udacity nanodegree](https://www.udacity.com/course/data-scientist-nanodegree--nd025) project (Data Science Capstone).
-This project uses users' event data from Sparkify, which is an imaninary digital music service similar to Spotify or Pandora, to build a model for an API that predicts chrn, and deploy a Flask based web app.
+This project uses users' event data from Sparkify, which is an imaninary digital music service similar to Spotify or Pandora, to build a model to predict users' churn.
 
 ## Dependencies
 
