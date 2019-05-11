@@ -8,8 +8,7 @@
   - [Dependencies](#dependencies)
   - [Installation](#installation)
   - [Instructions](#instructions)
-    - [Jupyter Notebook](#jupyter-notebook)
-    - [Web Application](#web-application)
+    - [Run Jupyter Notebook](#run-jupyter-notebook)
   - [Project Organization](#project-organization)
   - [Analysis](#analysis)
   - [Conclusion](#conclusion)
@@ -21,7 +20,7 @@ This project uses users' event data from Sparkify, which is an imaninary digital
 
 ## Dependencies
 
-- Python3.7
+- Python3.6
 - [Poetry](https://github.com/sdispater/poetry)
 
 ## Installation
@@ -33,35 +32,19 @@ poetry install
 
 ## Instructions
 
-### Jupyter Notebook
+### Run Jupyter Notebook
 
 ```bash
 cd sparkify-project
 poetry run jupyter notebook
 ```
 
-### Web Application
-
-```bash
-cd sparkify-project
-poetry run python run.py
-```
-
-Go to `http://0.0.0.0:3001/`
-
 ## Project Organization
 
 ```text
 [project root]
-├── app
-│   ├── run.py
-│   └── templates
-│       └── *.html
-├── data
-│   ├── *.py
+├── input
 │   └── mini_sparkify_event_data.json
-├── models
-│   └── *.py
 ├── notebooks
 │   └── *.ipynb
 ├── README.md

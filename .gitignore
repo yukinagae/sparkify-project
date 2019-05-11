@@ -2,7 +2,7 @@
 .python-version
 
 # data
-data/*.json
+input/*.json
 
 # model1
 models/*.pkl
