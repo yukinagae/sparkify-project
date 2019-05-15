@@ -18,7 +18,7 @@ Kaggle Kernel: https://www.kaggle.com/yukinagae/sparkify-project-churn-predictio
 ## Project Definition
 
 This is a [Udacity nanodegree](https://www.udacity.com/course/data-scientist-nanodegree--nd025) project (Data Science Capstone).
-This project uses users' event data from Sparkify, which is an imaninary digital music service similar to Spotify or Pandora, to build a model to predict users' churn.
+This project uses users' event data from Sparkify, which is an imaginary digital music service similar to Spotify or Pandora, to build a model to predict users' churn.
 
 ## Dependencies
 
@@ -48,7 +48,7 @@ poetry run jupyter notebook
 ├── input
 │   └── mini_sparkify_event_data.json
 ├── notebooks
-│   └── *.ipynb
+│   └── Sparkify.ipynb
 ├── README.md
 ├── .gitignore
 ├── poetry.lock
@@ -59,14 +59,14 @@ poetry run jupyter notebook
 
 The original size of the dataset is 12GB which is too large for my preliminary analysis, I used the small dataset (128MB) to perform data exploration process.
 
-After doing EDA, I created the below featurs for later modeling part.
+After doing EDA, I created the below features for later modeling part.
 
-- artist: the number of artist
+- artist: the number of artists
 - gender: 0 or 1
 - length: the total length
 - level: 0 or 1
 - page: the number of Thumbs Up / Thumbs Down
-- song: the number of song
+- song: the number of songs
 
 I have used three machine learning models:
 
@@ -74,11 +74,11 @@ I have used three machine learning models:
 - Random Forest classifier
 - GBT classifier
 
-As a result of the imbalanced dataset (`Churn` users are extremely few), Logistic Regression predicted zeros (`Not Churn`) for all the users, and gives me F1 score 0.732. Even 
+As a result of the imbalanced dataset (`Churn` users are extremely few), Logistic Regression predicted zeros (`Not Churn`) for all the users and gives me F1 score 0.732. Even 
 
-I decided to use this score as a baseline, and better scores than this baseline is necessary for further modeling.
+I decided to use this score as a baseline, and better scores than this baseline are necessary for further modeling.
 
-Testing three machine learning models and Random Forest gives me the best score which is 0.738. According to the below feature importances provided by the Random Forest model, `Thumbs Up` and `Thumbs Down` seem to be important while the level of the users do not really matter.
+Testing three machine learning models and Random Forest gives me the best score which is 0.738. According to the below feature importance provided by the Random Forest model, `Thumbs Up` and `Thumbs Down` seem to be important while the level of the users do not really matter.
 
 ![feature_importance](feature_importance.png)
 
@@ -88,4 +88,4 @@ After proceeding hyperparameter tuning with the Random Forest model, the model h
 
 - F1 score: 0.7478
 
-Since this modeling process is done for only the small subset of the dataset, more hyperparameter tuning might provide different results when using the original dataset. For a production use, this task would be performed on cloud enviroenment such as AWS or GCP to deal with the large dataset.
+Since this modeling process is done for only the small subset of the dataset, more hyperparameter tuning might provide different results when using the original dataset. For production use, this task would be performed on cloud environments such as AWS or GCP to deal with the large dataset.
