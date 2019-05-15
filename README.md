@@ -1,5 +1,7 @@
 # Sparkify Project
 
+Kaggle Kernel: https://www.kaggle.com/yukinagae/sparkify-project-churn-prediction
+
 ## Table of Contents
 
 - [Sparkify Project](#sparkify-project)
@@ -55,8 +57,35 @@ poetry run jupyter notebook
 
 ## Analysis
 
-TODO: not yet written
+The original size of the dataset is 12GB which is too large for my preliminary analysis, I used the small dataset (128MB) to perform data exploration process.
+
+After doing EDA, I created the below featurs for later modeling part.
+
+- artist: the number of artist
+- gender: 0 or 1
+- length: the total length
+- level: 0 or 1
+- page: the number of Thumbs Up / Thumbs Down
+- song: the number of song
+
+I have used three machine learning models:
+
+- Logistic Regression
+- Random Forest classifier
+- GBT classifier
+
+As a result of the imbalanced dataset (`Churn` users are extremely few), Logistic Regression predicted zeros (`Not Churn`) for all the users, and gives me F1 score 0.732. Even 
+
+I decided to use this score as a baseline, and better scores than this baseline is necessary for further modeling.
+
+Testing three machine learning models and Random Forest gives me the best score which is 0.738. According to the below feature importances provided by the Random Forest model, `Thumbs Up` and `Thumbs Down` seem to be important while the level of the users do not really matter.
+
+![feature_importance](feature_importance.png)
 
 ## Conclusion
 
-TODO: not yet written
+After proceeding hyperparameter tuning with the Random Forest model, the model has given me the below F1 score.
+
+- F1 score: 0.7478
+
+Since this modeling process is done for only the small subset of the dataset, more hyperparameter tuning might provide different results when using the original dataset. For a production use, this task would be performed on cloud enviroenment such as AWS or GCP to deal with the large dataset.
